@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "bot discord to play music written in nodeJS",
   "main": "index.js",
+  "engines": {
+    "npm": "16.10.x"
+  },
   "scripts": {
     "start": "node ."
   },
