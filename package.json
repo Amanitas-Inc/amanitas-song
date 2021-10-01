@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/Amanitas-Inc/amanitas-song#readme",
   "dependencies": {
+    "@discordjs/voice": "^0.6.0",
     "discord-api-types": "^0.23.1",
     "discord.js": "^13.1.0",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "libsodium-wrappers": "^0.7.9"
   }
 }
