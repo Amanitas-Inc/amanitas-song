@@ -7,7 +7,7 @@
     "node": "16.10.x"
   },
   "scripts": {
-    "start": "tsc --target ES5 && node dist/index.js"
+    "start": "ts-node-dev index.ts"
   },
   "repository": {
     "type": "git",
@@ -31,9 +31,7 @@
     "libsodium-wrappers": "^0.7.9",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4",
-    "ytdl-core": "^4.9.1"
-  },
-  "devDependencies": {
+    "ytdl-core": "^4.9.1",
     "ts-node-dev": "^1.1.8"
   }
 }
