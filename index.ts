@@ -7,17 +7,15 @@ import {
     createAudioResource 
 } from '@discordjs/voice'
 import { Client, Intents } from 'discord.js'
-import { Player } from 'discord-player'
+import { Player as SearchMusic } from 'discord-player'
 import ytdl from 'ytdl-core'
 import env from 'dotenv'
 
 env.config()
 
-const prefix = '-';
-
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_VOICE_STATES ], retryLimit: 1, restRequestTimeout: 15000 });
 
-const searchTracks = new Player(client);
+const searchTracks = new SearchMusic(client);
 
 const player = createAudioPlayer({
 	behaviors: {
@@ -32,22 +30,20 @@ client.once('ready', () => {
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return;
 
-    if (!msg.content.startsWith(prefix)) return;
+    if (!msg.content.startsWith(process.env.PREFIX!)) return;
 
-    if (msg.content.startsWith(prefix + 'p')) {
-        msg.channel.send('você digitou: ');
-
-        const args = msg.content.trim().split(' ');
+    if (msg.content.startsWith(process.env.PREFIX! + 'p')) {
+        const args: string[] = msg.content.trim().split(' ');
         args.splice(0, 1); // remove prefix
-
-        const track = await searchTracks.search(args.join(' '), { requestedBy: msg.member!.user }).then(x => x.tracks[0]);
 
         const { channel } = msg.member!.voice;
 
         if (!channel) {
-            msg.channel.send("voce deve estar em chat de voz");
+            msg.channel.send("Você deve estar em um canal de voz!");
             return;
         }
+
+        const track = await searchTracks.search(args.join(' '), { requestedBy: msg.member!.user }).then(x => x.tracks[0]);
 
         const connection = joinVoiceChannel({
             channelId: channel.id,
