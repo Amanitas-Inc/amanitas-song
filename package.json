@@ -7,7 +7,7 @@
     "node": "16.10.x"
   },
   "scripts": {
-    "start": "tsc && node dist/index.js"
+    "start": "tsc --target ES5 && node dist/index.js"
   },
   "repository": {
     "type": "git",

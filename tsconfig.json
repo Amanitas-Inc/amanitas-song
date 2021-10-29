@@ -9,8 +9,9 @@
         "noImplicitAny": true,
         "outDir": "dist",
         "allowSyntheticDefaultImports": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "skipLibCheck": true
     },
-    "include": ["**/*"],
+    "include": ["*.ts"],
     "exclude": ["node_modules"]
 }
