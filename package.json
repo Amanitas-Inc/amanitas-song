@@ -2,12 +2,12 @@
   "name": "bot",
   "version": "1.0.0",
   "description": "bot discord to play music written in nodeJS",
-  "main": "index.js",
+  "main": "index.ts",
   "engines": {
     "node": "16.10.x"
   },
   "scripts": {
-    "start": "node ."
+    "start": "ts-node-dev ."
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,10 @@
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
     "libsodium-wrappers": "^0.7.9",
+    "ts-node": "^10.4.0",
     "ytdl-core": "^4.9.1"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8"
   }
 }
