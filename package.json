@@ -7,7 +7,7 @@
     "node": "16.10.x"
   },
   "scripts": {
-    "start": "ts-node-dev ."
+    "start": "ts-node-dev --transpile-only --ignore-watch node_modules index.ts"
   },
   "repository": {
     "type": "git",
