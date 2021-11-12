@@ -4,7 +4,7 @@
   "description": "bot discord to play music written in nodeJS",
   "main": "index.ts",
   "engines": {
-    "node": "16.10.x"
+    "node": "16.13.x"
   },
   "scripts": {
     "start": "tsc && node dist/index.js"
