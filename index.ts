@@ -32,6 +32,11 @@ client.on('messageCreate', async msg => {
 
     const track = await player.search(args.join(' '), { requestedBy: msg.member!.user }).then(x => x.tracks[0]);
 
+    if (track === undefined) {
+      msg.channel.send('Não consegui encontrar o som, tente novamente!');
+      return;
+    }
+
     const queue = player.createQueue(msg.guild!, { metadata: msg.channel });
 
     try {
@@ -42,6 +47,9 @@ client.on('messageCreate', async msg => {
     }
 
     queue.addTrack(track);
+
+    msg.channel.send(`A música ${track.title} foi adicionada à fila`)
+
     if (!queue.playing) await queue.play();
   }
 });
