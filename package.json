@@ -7,7 +7,7 @@
     "node": "16.10.x"
   },
   "scripts": {
-    "start": "tsc --target ES5 && node dist/index.js"
+    "start": "tsc && node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,16 +21,12 @@
   },
   "homepage": "https://github.com/Amanitas-Inc/amanitas-song#readme",
   "dependencies": {
-    "@discordjs/opus": "^0.5.3",
-    "@discordjs/voice": "^0.6.0",
     "discord-api-types": "^0.23.1",
     "discord-player": "^5.1.0",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
     "libsodium-wrappers": "^0.7.9",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.4.4",
-    "ytdl-core": "^4.9.1"
+    "typescript": "^4.4.4"
   }
 }
