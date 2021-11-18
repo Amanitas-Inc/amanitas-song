@@ -6,7 +6,6 @@
         "strict": true,
         "esModuleInterop": true,
         "strictNullChecks": true,
-        "noImplicitAny": true,
         "outDir": "dist",
         "allowSyntheticDefaultImports": true,
         "moduleResolution": "node",

@@ -4,7 +4,7 @@
   "description": "bot discord to play music written in nodeJS",
   "main": "index.ts",
   "engines": {
-    "node": "16.13.x"
+    "node": "16.10.x"
   },
   "scripts": {
     "start": "tsc && node dist/index.js"
@@ -22,12 +22,13 @@
   "homepage": "https://github.com/Amanitas-Inc/amanitas-song#readme",
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
-    "discord-api-types": "^0.23.1",
-    "discord-player": "^5.1.0",
-    "discord.js": "^13.1.0",
+    "@discordjs/voice": "^0.7.5",
+    "@types/dotenv": "^8.2.0",
+    "discord.js": "^13.3.1",
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
     "libsodium-wrappers": "^0.7.9",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "ytdl-core": "^4.9.1"
   }
 }
